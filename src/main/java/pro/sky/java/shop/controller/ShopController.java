@@ -2,6 +2,7 @@ package pro.sky.java.shop.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import pro.sky.java.shop.service.ShopService;
 
@@ -18,7 +19,7 @@ public class ShopController {
     }
 
     @GetMapping("/add")
-    public void add(Integer... id) {
+    public void add(@RequestParam Integer... id) {
         shopService.add(id);
     }
 
